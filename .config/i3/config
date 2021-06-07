@@ -96,8 +96,8 @@ bindsym $mod+a focus parent
 set $workspace1 "1: Term"
 set $workspace2 "2: Firefox"
 set $workspace3 "3: Brave"
-set $workspace4 "4: Chromium"
-set $workspace5 "5: VSCode"
+set $workspace4 "4: VSCode"
+set $workspace5 "5: Chromium"
 set $workspace10 "10: Keepass"
 
 # switch to workspace
@@ -174,6 +174,7 @@ exec_always feh --bg-scale ~/Pictures/Walpapers/minimalism-plane-ot-2560x1080.jp
 exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh --forest # Polybar with forest theme
 exec_always --no-startup-id dropbox start
+exec_always --no-startup-id nm-applet
 exec --no-startup-id keepassxc
 exec --no-startup-id redshift-gtk start
 exec--no-startup-id run_keybase start
@@ -182,9 +183,10 @@ exec--no-startup-id run_keybase start
 # default workspaces
 assign [class="Gnome-terminal"] $workspace1
 assign [class="Brave-browser"] $workspace3
-assign [class="Chromium"] $workspace4
+assign [class="Code"] $workspace4
+assign [class="Slack"] $workspace4
 assign [class="Firefox"] $workspace2
-assign [class="Code"] $workspace5
+assign [class="Chromium"] $workspace5
 assign [class="KeePassXC"] $workspace10
 assign [class="Keybase"] $workspace10
 
